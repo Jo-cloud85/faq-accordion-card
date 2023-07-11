@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  /* #### Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* ### Neutral */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --sky-blue: hsl(84, 29%, 97%);
+
+  /* #### Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  --r20: calc((20 / var(--base) * 1rem));
+  --r14: calc((14 / var(--base) * 1rem));
+  --r12: calc((12 / var(--base) * 1rem));
+  --base: 16;
+}
+ 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: 'Kumbh Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-color: var(--sky-blue);
+  font-size: var(--r12);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: 80vw;
+}
+
+.container .image {
+  background: url(./images/faq_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 20rem;
+}
+
+.article-question {
+  border-bottom: 0.1rem solid var(--light-grayish-blue);
+  padding: 1rem 0;
+}
+
+.article-question article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-question h2 {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.article-question h2.clicked {
+  font-weight: 600;
+}
+
+.article-question p {
+  color: var(--dark-grayish-blue);
+}
+
+.icon {
+  color: var(--soft-red);
+}
+
+@media (min-width: 768px) {
+  .container .image {
+    height: 30rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .container .image {
+    min-width: 30rem;
+  }
+
+  .container .questions {
+    display: grid;
+    place-content: center;
+    width: 100%;
+  }
+
+  .article-question {
+    width: clamp(20rem, 30rem, 40rem); 
+  }
+}
