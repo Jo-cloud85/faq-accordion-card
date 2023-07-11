@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/faq-accordion-card/static/css/main.c46ba3ba.css",
+    "main.js": "/faq-accordion-card/static/js/main.de61c802.js",
+    "static/media/faq_img.jpg": "/faq-accordion-card/static/media/faq_img.ff19a3b9c8d625d1ff33.jpg",
+    "index.html": "/faq-accordion-card/index.html",
+    "main.c46ba3ba.css.map": "/faq-accordion-card/static/css/main.c46ba3ba.css.map",
+    "main.de61c802.js.map": "/faq-accordion-card/static/js/main.de61c802.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c46ba3ba.css",
+    "static/js/main.de61c802.js"
+  ]
+}
